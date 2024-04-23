@@ -1,0 +1,59 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  width: 100%;
+  background-image: url(./Digging-In_MC-scaled.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+}
+h1{
+  position: absolute;
+  color: rgb(86, 92, 97);
+  width: 100%;
+  padding: 40px 7%;
+  font-size: 2.5em;
+}
+  .accordion {
+  display: flex;
+  flex-direction: column;
+  margin: 115px 6%;
+  max-width: 600px;
+}
+.question {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  box-shadow: blanchedalmond;
+}
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 10px;
+  background-color: #e9e4e4;
+  font-family:'Times New Roman', Times, serif;
+  border-radius: 5px; 
+}
+.question:focus + .answer { /* it means that when i am touching question the answer must do something (in this case what i want) */
+  max-height: 1000px; 
+  padding: 10px;
+}
+@media (max-width: 480px) {
+  .accordion {
+    max-width: 90%;
+    padding: 20px;
+}
+.question, .answer {
+  padding: 15px;
+}
+}
+
+
